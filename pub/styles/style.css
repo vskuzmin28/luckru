@@ -1,0 +1,242 @@
+@import '../styles/fonts.css';
+@import '../styles/reset.css';
+@media only screen and (min-width: 1024px) {
+  .centered__big {
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+  }
+  .centered__small {
+    position: relative;
+    margin: 0 auto;
+    width: 932px;
+  }
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
+  .center {
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 760px) {
+  .centered__big {
+    position: relative;
+    margin: 0 5%;
+    width: 90%;
+  }
+  .centered__small {
+    position: relative;
+    margin: 0 5%;
+    width: 90%;
+  }
+  .left {
+    float: none;
+  }
+  .right {
+    float: none;
+  }
+  .center {
+    margin: 0 auto;
+  }
+}
+a,
+a:hover,
+li,
+img,
+input,
+textarea {
+  transition: all 0.5s ease-in-out;
+}
+body {
+  cursor: default;
+}
+@media only screen and (min-width: 760px) and (max-width: 1024px) {
+  .centered__big {
+    position: relative;
+    margin: 0 5%;
+    width: 90%;
+  }
+  .centered__small {
+    position: relative;
+    margin: 0 5%;
+    width: 90%;
+  }
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
+  .center {
+    margin: 0 auto;
+  }
+}
+header {
+  color: #fff;
+  height: 68px;
+  background: #2c2c2c;
+}
+@media only screen and (min-width: 1024px) {
+  .header__logo {
+    top: 19px;
+    left: -184px;
+    position: absolute;
+    width: 141px;
+    height: 34px;
+  }
+  .header__logo img {
+    width: 141px;
+    height: 34px;
+  }
+  .header__navigation {
+    width: 500px;
+    margin-left: 8px;
+    height: 68px;
+  }
+  .header__navigation ul li a,
+  .header__navigation ul li a:hover {
+    padding: 0 20px;
+    display: block;
+    float: left;
+    height: 62px;
+    text-transform: uppercase;
+    font: 14px 'akrobatextrabold';
+    line-height: 59px;
+    color: #fff;
+    border-bottom: 6px solid #2c2c2c;
+    text-decoration: none;
+  }
+  .header__navigation ul li a:hover,
+  .header__navigation ul li a:hover:hover {
+    border-color: #fff;
+  }
+  .header__navigation__link__active {
+    border-color: #fff !important;
+  }
+  .header__contacts {
+    margin: 18px 35px 0 0;
+    width: 120px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .header__contacts p {
+    font: 10px 'akrobatblack';
+  }
+  .header__contacts div {
+    font: 17px 'akrobatextrabold';
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 760px) {
+  header {
+    color: #fff;
+    height: auto;
+    background: #2c2c2c;
+  }
+  .header__logo {
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 141px;
+    height: 34px;
+  }
+  .header__logo img {
+    width: 141px;
+    height: 34px;
+  }
+  .header__navigation {
+    width: 500px;
+    margin-left: 8px;
+    height: 68px;
+  }
+  .header__navigation ul li a,
+  .header__navigation ul li a:hover {
+    padding: 0 20px;
+    display: block;
+    float: left;
+    height: 62px;
+    text-transform: uppercase;
+    font: 14px 'akrobatextrabold';
+    line-height: 59px;
+    color: #fff;
+    border-bottom: 6px solid #2c2c2c;
+    text-decoration: none;
+  }
+  .header__navigation ul li a:hover,
+  .header__navigation ul li a:hover:hover {
+    border-color: #fff;
+  }
+  .header__navigation__link__active {
+    border-color: #fff !important;
+  }
+  .header__contacts {
+    margin: 18px 35px 0 0;
+    width: 120px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .header__contacts p {
+    font: 10px 'akrobatblack';
+  }
+  .header__contacts div {
+    font: 17px 'akrobatextrabold';
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1024px) {
+  header {
+    color: #fff;
+    height: 68px;
+    background: #2c2c2c;
+  }
+  .header__logo {
+    top: 19px;
+    left: -184px;
+    position: absolute;
+    width: 141px;
+    height: 34px;
+  }
+  .header__logo img {
+    width: 141px;
+    height: 34px;
+  }
+  .header__navigation {
+    width: 500px;
+    margin-left: 8px;
+    height: 68px;
+  }
+  .header__navigation ul li a,
+  .header__navigation ul li a:hover {
+    padding: 0 20px;
+    display: block;
+    float: left;
+    height: 62px;
+    text-transform: uppercase;
+    font: 14px 'akrobatextrabold';
+    line-height: 59px;
+    color: #fff;
+    border-bottom: 6px solid #2c2c2c;
+    text-decoration: none;
+  }
+  .header__navigation ul li a:hover,
+  .header__navigation ul li a:hover:hover {
+    border-color: #fff;
+  }
+  .header__navigation__link__active {
+    border-color: #fff !important;
+  }
+  .header__contacts {
+    margin: 18px 35px 0 0;
+    width: 120px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .header__contacts p {
+    font: 10px 'akrobatblack';
+  }
+  .header__contacts div {
+    font: 17px 'akrobatextrabold';
+  }
+}
