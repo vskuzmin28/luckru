@@ -1,19 +1,19 @@
-@media only screen and (min-width : 1024px) {
+@media only screen and (min-width : 0px) and (max-width : 760px) {
 
   // header
 
   header {
-    color: @white;
-    height: 68px;
-    background: @black-light;
+  color: @white;
+	height: auto;
+  background: @black-light;
   }
 
   // logo
-
   .header__logo {
-  top: 19px;
-  left: -184px;
-  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  position: relative;
   width: 141px;
   height: 34px;
 
@@ -28,7 +28,7 @@
 
   .header__navigation {
   width: 500px;
-  margin-left: 0;
+  margin-left: 8px;
   height: 68px;
 
   ul {
@@ -64,18 +64,18 @@
   // contacts
 
   .header__contacts {
-    margin: 18px 35px 0 0;
-    width: 120px;
-    text-align: center;
-    text-transform: uppercase;
+  margin: 18px 35px 0 0;
+  width: 120px;
+  text-align: center;
+  text-transform: uppercase;
 
-    p {
-      font: 10px @akr-black;
-    }
+  p {
+    font: 10px @akr-black;
+  }
 
-    div {
-      font: 17px @akr-extrabold;
-    }
+  div {
+    font: 17px @akr-extrabold;
+  }
 
   }
 
