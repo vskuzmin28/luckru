@@ -1,81 +1,65 @@
-@media only screen and (min-width : 0px) and (max-width : 760px) {
+@media only screen and (min-width : 0px) and (max-width : 1024px) {
 
-  // header
+  // service-level
 
-  header {
-  color: @white;
-	height: auto;
-  background: @black-light;
-  }
+  .service-level {
+    margin: 25px 0;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    background: #f2f2f4 url('../img/service-level.png') no-repeat center;
 
-  // logo
-  .header__logo {
-  margin: 0 auto;
-  top: 0;
-  left: 0;
-  position: relative;
-  width: 141px;
-  height: 34px;
-
-  img {
-    width: 141px;
-    height: 34px;
-  }
-
-  }
-
-  // navigation
-
-  .header__navigation {
-  width: 500px;
-  margin-left: 8px;
-  height: 68px;
-
-  ul {
-
-    li a, li a:hover {
-      padding: 0 20px;
-      display: block;
-      float: left;
-      height: 62px;
+    h3 {
+      margin-top: 85px;
+      font: 50px @akr-extrabold;
+      color: @blue;
+      text-align: center;
       text-transform: uppercase;
-      font: 14px @akr-extrabold;
-      line-height: 59px;
-      color: @white;
-      border-bottom: 6px solid @black-light;
-      text-decoration: none;
-
-      &:hover {
-        border-color: @white;
-      }
-
     }
 
   }
 
+  // conteiner
+
+  .service-level__conteiner {
+    margin-top: 50px;
+
+    img {
+      margin-top: 34px;
+      display: block;
+      float: none;
+      width: 60%;
+      height: auto;
+      margin: 0 auto 40px auto;
+    }
+
   }
 
-  // active link in navigation block
+  // content
 
-  .header__navigation__link__active {
-    border-color: @white !important;
-  }
+  .service-level__conteiner__content {
+    float: none;
+    width: auto;
 
-  // contacts
+    h4 {
+      margin-bottom: 50px;
+      font: 36px @akr-bold;
+      color: @blue;
+      text-transform: uppercase;
+    }
 
-  .header__contacts {
-  margin: 18px 35px 0 0;
-  width: 120px;
-  text-align: center;
-  text-transform: uppercase;
+    ul {
+      li {
+        font: 22px @akr-regular;
+        line-height: 36px;
+        color: @black-grey;
+      }
 
-  p {
-    font: 10px @akr-black;
-  }
+      li:before {
+        content: "-";
+      }
 
-  div {
-    font: 17px @akr-extrabold;
-  }
+    }
 
   }
 

@@ -1,2 +1,26 @@
 
-<div class="map"></div>
+<div class="map" id="map">
+  <!-- centered-->
+  <div class="centered__big">
+    <!-- form-->
+    <div class="form__mail mt-90">
+      <!-- title block-->
+      <div class="form__mail__title-block">
+        <h5>	Sign Up</h5>
+        <p>	Want to sign up fill out this form</p>
+      </div>
+      <form class="send-form" action="../mail.php" method="post">
+        <label>	Fist Name:</label>
+        <input type="text" name="name" placeholder="Felix" required="required"/>
+        <label>	Email:</label>
+        <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$" placeholder="Kjellberg" required="required"/>
+        <label>	Phone number:</label>
+        <input type="text" name="phone" pattern=".{9,}" placeholder="033 022 011" required="required"/>
+        <input type="hidden" id="action" name="action" value="submitform"/>
+        <input class="btn btn__blue" type="submit" name="" value="Tell me more"/>
+      </form>
+    </div>
+    <!-- / form-->
+  </div>
+  <div id="gmap_canvas"></div>
+</div>

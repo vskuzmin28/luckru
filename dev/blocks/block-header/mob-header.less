@@ -1,57 +1,64 @@
-@media only screen and (min-width : 0px) and (max-width : 760px) {
+@media only screen and (min-width : 0px) and (max-width : 1024px) {
 
   // header
 
   header {
-  color: @white;
-	height: auto;
-  background: @black-light;
+    color: @white;
+    height: auto;
+    overflow: hidden;
+    background: @black-light;
   }
 
   // logo
-  .header__logo {
-  margin: 0 auto;
-  top: 0;
-  left: 0;
-  position: relative;
-  width: 141px;
-  height: 34px;
 
-  img {
+  .header__logo {
+    margin-right: 0;
+    margin-top: 0;
+    top: 0px;
+    left: 0px;
+    position: relative;
     width: 141px;
     height: 34px;
-  }
+    float: none;
+    margin: 30px auto !important;
+
+    img {
+      width: 141px;
+      height: 34px;
+    }
 
   }
 
   // navigation
 
   .header__navigation {
-  width: 500px;
-  margin-left: 8px;
-  height: 68px;
+    width: auto !important;
+    margin-left: 0 !important;
+    height: auto !important;
 
-  ul {
+    ul {
 
-    li a, li a:hover {
-      padding: 0 20px;
-      display: block;
-      float: left;
-      height: 62px;
-      text-transform: uppercase;
-      font: 14px @akr-extrabold;
-      line-height: 59px;
-      color: @white;
-      border-bottom: 6px solid @black-light;
-      text-decoration: none;
+      li a, li a:hover {
+        padding: 0 0px !important;
+        display: block !important;
+        float: none !important;
+        height: 72px;
+        text-transform: uppercase;
+        font: 14px @akr-extrabold;
+        line-height: 59px;
+        color: @white;
+        border-bottom: 6px solid @black-light;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
 
-      &:hover {
-        border-color: @white;
+        &:hover {
+          border-color: @white;
+        }
+
       }
 
     }
-
-  }
 
   }
 
@@ -64,18 +71,24 @@
   // contacts
 
   .header__contacts {
-  margin: 18px 35px 0 0;
-  width: 120px;
-  text-align: center;
-  text-transform: uppercase;
+    margin: 30px auto !important;
+    width: 120px;
+    text-align: center;
+    text-transform: uppercase;
 
-  p {
-    font: 10px @akr-black;
-  }
+    p {
+      font: 10px @akr-black;
+    }
 
-  div {
-    font: 17px @akr-extrabold;
-  }
+    div {
+      font: 17px @akr-extrabold;
+
+      a, a:hover {
+        color: @white;
+        text-decoration: none !important;
+      }
+
+    }
 
   }
 

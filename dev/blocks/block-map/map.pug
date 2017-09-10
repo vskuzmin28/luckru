@@ -1,1 +1,39 @@
-.map
+#map.map
+	// centered
+	.centered__big
+
+		// form
+
+		.form__mail.mt-90
+
+			// title block
+			.form__mail__title-block
+				h5
+					|	Sign Up
+				p
+					|	Want to sign up fill out this form
+
+			form.send-form(action="../mail.php" method="post")
+				label
+					|	Fist Name:
+				input(type="text" name="name" placeholder="Felix" required)
+
+				label
+					|	Email:
+				input(type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Kjellberg" required)
+
+				label
+					|	Phone number:
+				input(type="text" name="phone" pattern=".{9,}" placeholder="033 022 011" required)
+
+				input(type="hidden" id="action" name="action" value="submitform")
+				input.btn.btn__blue(type="submit" name="" value="Tell me more")
+
+		// / form
+
+	#gmap_canvas
+
+
+
+
+		

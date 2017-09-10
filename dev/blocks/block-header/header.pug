@@ -11,13 +11,13 @@ header
     // navigation
     nav.left.header__navigation
       ul
-        li: a.header__navigation__link__active(href="#" title="")
+        li: a(data-easing="easeInQuad" href="#servicess" title="")
           | The services
-        li: a(href="#" title="")
+        li: a(data-easing="easeInQuad" href="#our-works" title="")
           | Our works
-        li: a(href="#" title="")
+        li: a(data-easing="easeInQuad" href="#about-us" title="")
           | About us
-        li: a(href="#" title="")
+        li: a(data-easing="easeInQuad" href="#map" title="")
           | Contacts
 
     // contacts information
@@ -25,4 +25,5 @@ header
       p
         | Call the specialist:
       div
-        | 0333 344 347
+        a(href="tel:0333344347" title="")
+          | 0333 344 347

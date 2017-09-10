@@ -1,80 +1,148 @@
-$('.icon__menu').click(function(){
-	$('.navigation').bPopup({
-    	closeClass:'navigation__close',
+// call popup
+
+$('.call').click(function(){
+	event.preventDefault();
+	$('.popup-call').bPopup({
+   	closeClass:'icon__close',
     	amsl: 0,
     	positionStyle: 'fixed',
     });	
 });
 
-$('.link__auth').click(function(){
-	$('.auth').bPopup({
-    	closeClass:'auth__close',
+// call popup
+
+$('.call-policy').click(function(){
+	event.preventDefault();
+	$('.popup-policy').bPopup({
+   	closeClass:'icon__close',
     	amsl: 0,
     	positionStyle: 'fixed',
     });	
 });
 
-$('.link__no-connect').click(function(){
-	$('.no-connection').bPopup({
-    	closeClass:'icon__close',
-    	amsl: 0,
-    	positionStyle: 'fixed',
-    });	
+// nav logics
+
+$('.header__navigation li a').click(function(){
+	$('.header__navigation li a').removeClass('header__navigation__link__active');
+	$(this).addClass('header__navigation__link__active');		
 });
 
-$('.auth__elements input').click(function(){
-	$('.keypad').show();
+
+// song one
+
+$(function() {
+
+  var $aud = $(".audio-1"),
+      $pp  = $('.play-body-1'),
+      $vol = $('.volume-1'),
+      $bar = $(".progressbar-1"),
+      AUDIO= $aud[0];
+  
+  AUDIO.volume = 0.75;
+  AUDIO.addEventListener("timeupdate", progress, false);
+  
+  function progress() {
+    $bar.slider('value', ~~(100/AUDIO.duration*AUDIO.currentTime));
+  }
+
+  $vol.slider( {
+    value : AUDIO.volume*100,
+    slide : function(ev, ui) {
+      $vol.css({background:"hsla(180,"+ui.value+"%,50%,1)"});
+      AUDIO.volume = ui.value/100; 
+    } 
+  });
+   
+  $bar.slider( {
+    value : AUDIO.currentTime,
+    slide : function(ev, ui) {
+      AUDIO.currentTime = AUDIO.duration/100*ui.value;
+    }
+  });
+  
+  $pp.click(function() {
+    return AUDIO[AUDIO.paused?'play':'pause']();
+  });
+  
 });
 
-$('.keypad__close').click(function(){
-	$('.keypad').hide();
+$('.play-body-1').click(function(){
+	//$('.play-body').removeClass('play');
+	$(this).toggleClass('stop');
+})
+
+// song 2
+
+$(function() {
+
+  var $aud = $(".audio-2"),
+      $pp  = $('.play-body-2'),
+      $vol = $('.volume-2'),
+      $bar = $(".progressbar-2"),
+      AUDIO= $aud[0];
+  
+  AUDIO.volume = 0.75;
+  AUDIO.addEventListener("timeupdate", progress, false);
+  
+  function progress() {
+    $bar.slider('value', ~~(100/AUDIO.duration*AUDIO.currentTime));
+  }
+
+  $vol.slider( {
+    value : AUDIO.volume*100,
+    slide : function(ev, ui) {
+      $vol.css({background:"hsla(180,"+ui.value+"%,50%,1)"});
+      AUDIO.volume = ui.value/100; 
+    } 
+  });
+   
+  $bar.slider( {
+    value : AUDIO.currentTime,
+    slide : function(ev, ui) {
+      AUDIO.currentTime = AUDIO.duration/100*ui.value;
+    }
+  });
+  
+  $pp.click(function() {
+    return AUDIO[AUDIO.paused?'play':'pause']();
+  });
+  
 });
 
-// main tabs
-
-$('.tabs__content__two, .tabs__content__three').hide();
-
-$('.tab__one').click(function(){
-	$('.tabs__content__one').show();
-	$('.tabs__content__two').hide();
-	$('.tabs__content__three').hide();
-	$('.tab__one').addClass('tab__active');
-	$('.tab__two').removeClass('tab__active');
-	$('.tab__three').removeClass('tab__active');
+$('.play-body-2').click(function(){
+	//$('.play-body').removeClass('play');
+	$(this).toggleClass('stop');
 });
 
-$('.tab__two').click(function(){
-	$('.tabs__content__one').hide();
-	$('.tabs__content__two').show();
-	$('.tabs__content__three').hide();
-	$('.tab__two').addClass('tab__active');
-	$('.tab__one').removeClass('tab__active');
-	$('.tab__three').removeClass('tab__active');
-});
+// google map
 
-$('.tab__three').click(function(){
-	$('.tabs__content__one').hide();
-	$('.tabs__content__two').hide();
-	$('.tabs__content__three').show();
-	$('.tab__three').addClass('tab__active');
-	$('.tab__two').removeClass('tab__active');
-	$('.tab__one').removeClass('tab__active');
-});
+function init_map(){
+	var myOptions = {zoom:12,center:new google.maps.LatLng(51.5073509,-0.20976929999998223),
+		mapTypeId: google.maps.MapTypeId.ROADMAP};
+		map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+		marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(51.5073509,-0.12775829999998223)});
+		infowindow = new google.maps.InfoWindow({content:'<strong>Place</strong><br>London<br>'});
 
-// main subtabs
+		google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);
+	});
+		infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
 
-$('.subtabs__content__outs').hide();
+// scroll
 
-$('.subtab__one').click(function(){
-	$('.subtabs__content__in').show();
-	$('.subtabs__content__outs').hide();
-	$('.subtab__one').addClass('subtab__active');
-	$('.subtab__two').removeClass('subtab__active');
-});
+var easeInQuad = new SmoothScroll('[data-easing="easeInQuad"]', {easing: 'easeInQuad'});
 
-$('.subtab__two').click(function(){
-	$('.subtabs__content__outs').show();
-	$('.subtabs__content__in').hide();
-	$('.subtab__two').addClass('subtab__active');
-	$('.subtab__one').removeClass('subtab__active');
-});
+$('.send-form').submit(function() {
+      $.post($(this).attr('action'), $(this).serialize(), function(res) {         
+     if (res.success == 1) {
+         $('#rise').bPopup().close();
+           $('#okthanks').bPopup({
+             closeClass:'сlose',
+                 amsl: 0
+            });
+           setTimeout(function(){$('#okthanks').bPopup().close();}, 3000);
+       }else{
+       alert(res.text);
+       }
+    }, 'json');
+    return false;
+  })

@@ -1,0 +1,70 @@
+@media only screen and (min-width : 1024px) {
+
+  // 4 cases
+
+  .four-cases {
+  	padding: 50px 0;
+  	height: auto;
+  	overflow: hidden;
+
+  	h3 {
+  		font: 38px @akr-bold;
+  		color: @blue;
+  		text-align: center;
+  		text-transform: uppercase;
+  	}
+
+  }
+
+  // conteiner
+
+  .four-cases__conteiner {
+  	margin-top: 60px;
+  	height: auto;
+  }
+
+  // block
+
+  .four-cases__conteiner__block {
+  	float: left;
+  	margin-right: 70px;
+  	margin-bottom: 70px;
+  	width: 478px;
+  	height: 364px;
+
+  	&:nth-child(2), &:nth-child(4) {
+  		margin-right: 0 !important;
+  	}
+
+  	&:nth-child(3), &:nth-child(4) {
+  		margin-bottom: 0;
+  	}
+
+  	p {
+  		margin-bottom: 20px;
+  		font: 18px @akr-bold;
+  		text-transform: uppercase;
+  	}
+
+  	ul {
+  		li {
+  			margin-bottom: 16px;
+  			margin-left: 15px;
+  			font: 18px @akr-regular;
+
+  			&:before {
+  				margin-left: -14px;
+  				position: absolute;
+  				content: "-";
+  			}
+
+  			span {
+  				color: @blue;
+  			}
+
+  		}
+  	}
+
+  }
+
+}
