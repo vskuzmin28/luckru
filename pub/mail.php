@@ -11,17 +11,17 @@ if(isset($_POST['action']) && $_POST['action'] == 'submitform')
   //
   $ip = gethostbyname($_SERVER['REMOTE_ADDR']); 
 
-    $to = 'vskuzmin28@gmail.com';
-    $subject = "Форма обратной связи";
+    $to = 'sgdin@yandex.ru';
+    $subject = "Call form";
      
     //headers and subject
     $headers  = "MIME-Version: 1.0\r\n";
     $headers .= "Content-type: text/html; charset=UTF-8\r\n";
-    $headers .= "From: binarum Automailer <support@binarum.ru>\r\n";
+    $headers .= "From: Luckru <support@luckru.cu.uk>\r\n";
     
-    $body = "Новый запрос по форме обратной связи<br />";
-    $body .= "Имя: ".$name."<br />";
-    $body .= "Телефон: ".$phone."<br />";
+    $body = "New order<br />";
+    $body .= "Name: ".$name."<br />";
+    $body .= "Phone number: ".$phone."<br />";
     if(isset($_POST['email'])) { $body .= "Почта: ".$email."<br />"; }  
     $body .= "IP: ".$ip."<br />";
     
